@@ -1,8 +1,18 @@
--- models/marts/fct_flights.sql
+
+  
+    
+
+  create  table "flight_db"."public"."fct_flights__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/fct_flights.sql
 -- Layer 3: Final analytics-ready table — Power BI connects here
 
 with enriched as (
-    select * from {{ ref('int_flights_enriched') }}
+    select * from "flight_db"."public"."int_flights_enriched"
 ),
 
 final as (
@@ -47,3 +57,5 @@ final as (
 )
 
 select * from final
+  );
+  

@@ -2,7 +2,7 @@
 -- Layer 3: Final analytics-ready table — Power BI connects here
 
 with enriched as (
-    select * from {{ ref('int_flights_enriched') }}
+    select * from "flight_db"."public"."int_flights_enriched"
 ),
 
 final as (
