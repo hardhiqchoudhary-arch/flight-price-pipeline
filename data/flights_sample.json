@@ -1,0 +1,49 @@
+{
+  "flights": [
+    {
+      "origin": "JFK",
+      "destination": "LHR",
+      "flight_date": "2026-03-18",
+      "price": 325,
+      "airline": "Virgin Atlantic",
+      "duration": 415,
+      "stops": 0
+    },
+    {
+      "origin": "JFK",
+      "destination": "LHR",
+      "flight_date": "2026-03-18",
+      "price": 329,
+      "airline": "British Airways",
+      "duration": 430,
+      "stops": 1
+    },
+    {
+      "origin": "JFK",
+      "destination": "LHR",
+      "flight_date": "2026-03-18",
+      "price": 359,
+      "airline": "Turkish Airlines",
+      "duration": 600,
+      "stops": 1
+    },
+    {
+      "origin": "JFK",
+      "destination": "LHR",
+      "flight_date": "2026-03-18",
+      "price": 410,
+      "airline": "Lufthansa",
+      "duration": 520,
+      "stops": 1
+    },
+    {
+      "origin": "JFK",
+      "destination": "LHR",
+      "flight_date": "2026-03-18",
+      "price": 389,
+      "airline": "Delta",
+      "duration": 450,
+      "stops": 0
+    }
+  ]
+}
