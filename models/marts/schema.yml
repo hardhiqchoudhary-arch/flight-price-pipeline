@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fct_flights
+    description: "Final analytics-ready flight facts table for Power BI"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+      - name: route
+        description: "Origin → Destination string"
+        tests:
+          - not_null
+
+      - name: deal_flag
+        description: "Good deal, fair price, or overpriced"
+        tests:
+          - accepted_values:
+              values: ['good deal', 'fair price', 'overpriced']
+
+      - name: price_usd
+        tests:
+          - not_null
