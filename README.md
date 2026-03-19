@@ -1,10 +1,10 @@
-# ✈️ FlightLens: Predictive Airfare Analytics Pipeline
+# FlightLens: Predictive Airfare Analytics Pipeline
 
 An end-to-end data engineering pipeline that ingests real-time flight prices, transforms and models the data through a multi-layer dbt architecture, predicts fare movements using XGBoost, and delivers plain-English AI recommendations — all orchestrated automatically with Apache Airflow.
 
 ---
 
-## 🧠 The Problem
+## The Problem
 
 Flight prices change hundreds of times a day. Airlines use sophisticated pricing algorithms. Travelers are left guessing — *"Should I book now or wait?"*
 
@@ -12,7 +12,7 @@ FlightLens answers that question with data.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 ```
 Sky Scrapper API (RapidAPI)
         ↓
@@ -36,7 +36,7 @@ Power BI Dashboard (Visualization)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Tool |
 |---|---|
@@ -51,7 +51,7 @@ Power BI Dashboard (Visualization)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 flight-price-pipeline/
 │
@@ -84,7 +84,7 @@ flight-price-pipeline/
 
 ---
 
-## 🤖 AI Insight Example
+##  AI Insight Example
 
 Instead of just showing numbers, the pipeline generates insights like:
 
@@ -102,7 +102,7 @@ Instead of just showing numbers, the pipeline generates insights like:
 
 ---
 
-## ⚙️ Airflow Pipeline
+##  Airflow Pipeline
 
 The DAG runs daily at 8am and executes 4 tasks in order:
 ```
@@ -113,7 +113,7 @@ If any task fails, all downstream tasks stop automatically and retries kick in a
 
 ---
 
-## ✅ Project Status
+##  Project Status
 
 - [x] Real-time flight data ingestion via Sky Scrapper API
 - [x] PostgreSQL database schema for historical price tracking
