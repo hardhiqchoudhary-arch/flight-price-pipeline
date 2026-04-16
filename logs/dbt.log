@@ -1556,3 +1556,1068 @@ having count(*) > 1
 [0m23:05:09.590842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c543d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6bfd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6bf6d0>]}
 [0m23:05:09.591044 [debug] [MainThread]: Flushing usage events
 [0m23:05:09.637140 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:48:20.012359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e37cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ec37f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ec35e0>]}
+
+
+============================== 14:48:20.015131 | 9b1c1bf2-1813-4b7a-9be3-15971f8fdba0 ==============================
+[0m14:48:20.015131 [info ] [MainThread]: Running with dbt=1.10.20
+[0m14:48:20.015470 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'log_format': 'default', 'version_check': 'True', 'invocation_command': 'dbt run', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'printer_width': '80', 'introspect': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': '/Users/hardhiqchoudhary/Desktop/flight-price-pipeline/logs', 'profiles_dir': '/Users/hardhiqchoudhary/.dbt', 'quiet': 'False', 'target_path': 'None', 'no_print': 'None', 'cache_selected_only': 'False'}
+[0m14:48:20.142293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eaec70>]}
+[0m14:48:20.177094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c5d130>]}
+[0m14:48:20.177769 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m14:48:20.249586 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m14:48:20.368122 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:48:20.368399 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:48:20.395691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f0ef70>]}
+[0m14:48:20.448000 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/manifest.json
+[0m14:48:20.449218 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/semantic_manifest.json
+[0m14:48:20.461618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e7bc40>]}
+[0m14:48:20.461900 [info ] [MainThread]: Found 3 models, 12 data tests, 447 macros
+[0m14:48:20.462111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f2bac0>]}
+[0m14:48:20.462922 [info ] [MainThread]: 
+[0m14:48:20.463124 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:48:20.463303 [info ] [MainThread]: 
+[0m14:48:20.463570 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:48:20.466037 [debug] [ThreadPool]: Acquiring new postgres connection 'list_flight_db'
+[0m14:48:20.515833 [debug] [ThreadPool]: Using postgres connection "list_flight_db"
+[0m14:48:20.516084 [debug] [ThreadPool]: On list_flight_db: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "connection_name": "list_flight_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:48:20.516255 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:48:20.541499 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.025 seconds
+[0m14:48:20.542250 [debug] [ThreadPool]: On list_flight_db: Close
+[0m14:48:20.542973 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_flight_db, now list_flight_db_public)
+[0m14:48:20.546882 [debug] [ThreadPool]: Using postgres connection "list_flight_db_public"
+[0m14:48:20.547072 [debug] [ThreadPool]: On list_flight_db_public: BEGIN
+[0m14:48:20.547229 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:48:20.557478 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m14:48:20.557674 [debug] [ThreadPool]: Using postgres connection "list_flight_db_public"
+[0m14:48:20.557850 [debug] [ThreadPool]: On list_flight_db_public: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "connection_name": "list_flight_db_public"} */
+select
+      'flight_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'flight_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'flight_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:48:20.567771 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.010 seconds
+[0m14:48:20.568460 [debug] [ThreadPool]: On list_flight_db_public: ROLLBACK
+[0m14:48:20.568826 [debug] [ThreadPool]: On list_flight_db_public: Close
+[0m14:48:20.571892 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.572079 [debug] [MainThread]: On master: BEGIN
+[0m14:48:20.572239 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:48:20.582421 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m14:48:20.582606 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.582830 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m14:48:20.595597 [debug] [MainThread]: SQL status: SELECT 2 in 0.013 seconds
+[0m14:48:20.596500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f4d5b0>]}
+[0m14:48:20.596767 [debug] [MainThread]: On master: ROLLBACK
+[0m14:48:20.597139 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.597319 [debug] [MainThread]: On master: BEGIN
+[0m14:48:20.597845 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:48:20.598027 [debug] [MainThread]: On master: COMMIT
+[0m14:48:20.598202 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.598371 [debug] [MainThread]: On master: COMMIT
+[0m14:48:20.598694 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:48:20.598877 [debug] [MainThread]: On master: Close
+[0m14:48:20.600488 [debug] [Thread-1  ]: Began running node model.flight_pipeline.stg_flights
+[0m14:48:20.600802 [info ] [Thread-1  ]: 1 of 3 START sql view model public.stg_flights ................................. [RUN]
+[0m14:48:20.601073 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_flight_db_public, now model.flight_pipeline.stg_flights)
+[0m14:48:20.601293 [debug] [Thread-1  ]: Began compiling node model.flight_pipeline.stg_flights
+[0m14:48:20.606509 [debug] [Thread-1  ]: Writing injected SQL for node "model.flight_pipeline.stg_flights"
+[0m14:48:20.606946 [debug] [Thread-1  ]: Began executing node model.flight_pipeline.stg_flights
+[0m14:48:20.629334 [debug] [Thread-1  ]: Writing runtime sql for node "model.flight_pipeline.stg_flights"
+[0m14:48:20.629821 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.630023 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: BEGIN
+[0m14:48:20.630206 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:48:20.640729 [debug] [Thread-1  ]: SQL status: BEGIN in 0.011 seconds
+[0m14:48:20.640957 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.641176 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.stg_flights"} */
+
+  create view "flight_db"."public"."stg_flights__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_flights.sql
+-- Layer 1: Clean and standardize raw flight data
+
+with source as (
+    select * from flights
+),
+
+staged as (
+    select
+        -- identifiers
+        id,
+        
+        -- route info
+        upper(trim(origin))      as origin,
+        upper(trim(destination)) as destination,
+        
+        -- flight details
+        flight_date,
+        airline,
+        price::numeric(10,2)     as price_usd,
+        duration                 as duration_minutes,
+        stops,
+        
+        -- derived columns
+        case 
+            when stops = 0 then 'direct'
+            when stops = 1 then '1 stop'
+            else 'multi-stop'
+        end as stop_type,
+
+        -- metadata
+        current_timestamp as ingested_at
+
+    from source
+    where price is not null
+      and flight_date >= current_date
+)
+
+select * from staged
+  );
+[0m14:48:20.657423 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.016 seconds
+[0m14:48:20.661837 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.662072 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.stg_flights"} */
+alter table "flight_db"."public"."stg_flights" rename to "stg_flights__dbt_backup"
+[0m14:48:20.663125 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:48:20.665124 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.665348 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.stg_flights"} */
+alter table "flight_db"."public"."stg_flights__dbt_tmp" rename to "stg_flights"
+[0m14:48:20.666304 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:48:20.676486 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: COMMIT
+[0m14:48:20.676705 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.676900 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: COMMIT
+[0m14:48:20.678118 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:48:20.681918 [debug] [Thread-1  ]: Applying DROP to: "flight_db"."public"."stg_flights__dbt_backup"
+[0m14:48:20.684600 [debug] [Thread-1  ]: Using postgres connection "model.flight_pipeline.stg_flights"
+[0m14:48:20.684823 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.stg_flights"} */
+drop view if exists "flight_db"."public"."stg_flights__dbt_backup" cascade
+[0m14:48:20.689797 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.005 seconds
+[0m14:48:20.691194 [debug] [Thread-1  ]: On model.flight_pipeline.stg_flights: Close
+[0m14:48:20.692391 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a363c70>]}
+[0m14:48:20.692751 [info ] [Thread-1  ]: 1 of 3 OK created sql view model public.stg_flights ............................ [[32mCREATE VIEW[0m in 0.09s]
+[0m14:48:20.693087 [debug] [Thread-1  ]: Finished running node model.flight_pipeline.stg_flights
+[0m14:48:20.693512 [debug] [Thread-3  ]: Began running node model.flight_pipeline.int_flights_enriched
+[0m14:48:20.693814 [info ] [Thread-3  ]: 2 of 3 START sql view model public.int_flights_enriched ........................ [RUN]
+[0m14:48:20.694117 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.flight_pipeline.int_flights_enriched'
+[0m14:48:20.694318 [debug] [Thread-3  ]: Began compiling node model.flight_pipeline.int_flights_enriched
+[0m14:48:20.696294 [debug] [Thread-3  ]: Writing injected SQL for node "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.696676 [debug] [Thread-3  ]: Began executing node model.flight_pipeline.int_flights_enriched
+[0m14:48:20.699150 [debug] [Thread-3  ]: Writing runtime sql for node "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.700181 [debug] [Thread-3  ]: Using postgres connection "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.700396 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: BEGIN
+[0m14:48:20.700589 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m14:48:20.708893 [debug] [Thread-3  ]: SQL status: BEGIN in 0.008 seconds
+[0m14:48:20.709084 [debug] [Thread-3  ]: Using postgres connection "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.709297 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.int_flights_enriched"} */
+
+  create view "flight_db"."public"."int_flights_enriched__dbt_tmp"
+    
+    
+  as (
+    -- models/intermediate/int_flights_enriched.sql
+-- Layer 2: Enrich staged data with business logic and price analytics
+
+with staged as (
+    select * from "flight_db"."public"."stg_flights"
+),
+
+enriched as (
+    select
+        *,
+
+        -- price buckets
+        case
+            when price_usd < 300  then 'budget'
+            when price_usd < 500  then 'moderate'
+            when price_usd < 800  then 'expensive'
+            else 'premium'
+        end as price_category,
+
+        -- day of week (useful for ML later)
+        to_char(flight_date, 'Day')     as day_of_week,
+        extract(dow from flight_date)   as day_of_week_num,
+        extract(month from flight_date) as flight_month,
+
+        -- days until departure
+        (flight_date - current_date)    as days_until_departure,
+
+        -- price vs route average
+        avg(price_usd) over (
+            partition by origin, destination
+        ) as avg_route_price,
+
+        -- price rank within route (1 = cheapest)
+        rank() over (
+            partition by origin, destination
+            order by price_usd asc
+        ) as price_rank
+
+    from staged
+)
+
+select * from enriched
+  );
+[0m14:48:20.718064 [debug] [Thread-3  ]: SQL status: CREATE VIEW in 0.008 seconds
+[0m14:48:20.720949 [debug] [Thread-3  ]: Using postgres connection "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.721168 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.int_flights_enriched"} */
+alter table "flight_db"."public"."int_flights_enriched__dbt_tmp" rename to "int_flights_enriched"
+[0m14:48:20.722310 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:48:20.723111 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: COMMIT
+[0m14:48:20.723321 [debug] [Thread-3  ]: Using postgres connection "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.723531 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: COMMIT
+[0m14:48:20.724594 [debug] [Thread-3  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:48:20.726248 [debug] [Thread-3  ]: Applying DROP to: "flight_db"."public"."int_flights_enriched__dbt_backup"
+[0m14:48:20.726707 [debug] [Thread-3  ]: Using postgres connection "model.flight_pipeline.int_flights_enriched"
+[0m14:48:20.726916 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.int_flights_enriched"} */
+drop view if exists "flight_db"."public"."int_flights_enriched__dbt_backup" cascade
+[0m14:48:20.727371 [debug] [Thread-3  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m14:48:20.728045 [debug] [Thread-3  ]: On model.flight_pipeline.int_flights_enriched: Close
+[0m14:48:20.728366 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093aedc0>]}
+[0m14:48:20.728720 [info ] [Thread-3  ]: 2 of 3 OK created sql view model public.int_flights_enriched ................... [[32mCREATE VIEW[0m in 0.03s]
+[0m14:48:20.729031 [debug] [Thread-3  ]: Finished running node model.flight_pipeline.int_flights_enriched
+[0m14:48:20.729402 [debug] [Thread-2  ]: Began running node model.flight_pipeline.fct_flights
+[0m14:48:20.729699 [info ] [Thread-2  ]: 3 of 3 START sql table model public.fct_flights ................................ [RUN]
+[0m14:48:20.729982 [debug] [Thread-2  ]: Acquiring new postgres connection 'model.flight_pipeline.fct_flights'
+[0m14:48:20.730180 [debug] [Thread-2  ]: Began compiling node model.flight_pipeline.fct_flights
+[0m14:48:20.732147 [debug] [Thread-2  ]: Writing injected SQL for node "model.flight_pipeline.fct_flights"
+[0m14:48:20.732559 [debug] [Thread-2  ]: Began executing node model.flight_pipeline.fct_flights
+[0m14:48:20.746393 [debug] [Thread-2  ]: Writing runtime sql for node "model.flight_pipeline.fct_flights"
+[0m14:48:20.746832 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.747030 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: BEGIN
+[0m14:48:20.747210 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m14:48:20.757131 [debug] [Thread-2  ]: SQL status: BEGIN in 0.010 seconds
+[0m14:48:20.757385 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.757640 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.fct_flights"} */
+
+  
+    
+
+  create  table "flight_db"."public"."fct_flights__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/fct_flights.sql
+-- Layer 3: Final analytics-ready table — Power BI connects here
+
+with enriched as (
+    select * from "flight_db"."public"."int_flights_enriched"
+),
+
+final as (
+    select
+        -- identifiers
+        id,
+
+        -- route
+        origin,
+        destination,
+        origin || ' → ' || destination as route,
+
+        -- flight info
+        flight_date,
+        day_of_week,
+        flight_month,
+        days_until_departure,
+        airline,
+        duration_minutes,
+        round(duration_minutes / 60.0, 1) as duration_hours,
+        stops,
+        stop_type,
+
+        -- pricing
+        price_usd,
+        price_category,
+        price_rank,
+        round(avg_route_price, 2)               as avg_route_price,
+        round(price_usd - avg_route_price, 2)   as price_vs_avg,
+
+        -- is this a good deal?
+        case
+            when price_usd < avg_route_price * 0.9 then 'good deal'
+            when price_usd > avg_route_price * 1.1 then 'overpriced'
+            else 'fair price'
+        end as deal_flag,
+
+        -- metadata
+        ingested_at
+
+    from enriched
+)
+
+select * from final
+  );
+  
+[0m14:48:20.788144 [debug] [Thread-2  ]: SQL status: SELECT 284 in 0.030 seconds
+[0m14:48:20.793137 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.793389 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.fct_flights"} */
+alter table "flight_db"."public"."fct_flights" rename to "fct_flights__dbt_backup"
+[0m14:48:20.793991 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:48:20.796186 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.796413 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.fct_flights"} */
+alter table "flight_db"."public"."fct_flights__dbt_tmp" rename to "fct_flights"
+[0m14:48:20.797062 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:48:20.798355 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: COMMIT
+[0m14:48:20.798574 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.798775 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: COMMIT
+[0m14:48:20.799387 [debug] [Thread-2  ]: SQL status: COMMIT in 0.000 seconds
+[0m14:48:20.802335 [debug] [Thread-2  ]: Applying DROP to: "flight_db"."public"."fct_flights__dbt_backup"
+[0m14:48:20.804044 [debug] [Thread-2  ]: Using postgres connection "model.flight_pipeline.fct_flights"
+[0m14:48:20.804275 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "model.flight_pipeline.fct_flights"} */
+drop table if exists "flight_db"."public"."fct_flights__dbt_backup" cascade
+[0m14:48:20.807058 [debug] [Thread-2  ]: SQL status: DROP TABLE in 0.003 seconds
+[0m14:48:20.808957 [debug] [Thread-2  ]: On model.flight_pipeline.fct_flights: Close
+[0m14:48:20.809344 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9b1c1bf2-1813-4b7a-9be3-15971f8fdba0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5286d0>]}
+[0m14:48:20.809982 [info ] [Thread-2  ]: 3 of 3 OK created sql table model public.fct_flights ........................... [[32mSELECT 284[0m in 0.08s]
+[0m14:48:20.810325 [debug] [Thread-2  ]: Finished running node model.flight_pipeline.fct_flights
+[0m14:48:20.811066 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.811271 [debug] [MainThread]: On master: BEGIN
+[0m14:48:20.811441 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:48:20.819045 [debug] [MainThread]: SQL status: BEGIN in 0.008 seconds
+[0m14:48:20.819328 [debug] [MainThread]: On master: COMMIT
+[0m14:48:20.819595 [debug] [MainThread]: Using postgres connection "master"
+[0m14:48:20.819878 [debug] [MainThread]: On master: COMMIT
+[0m14:48:20.820498 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:48:20.820808 [debug] [MainThread]: On master: Close
+[0m14:48:20.821073 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:48:20.821229 [debug] [MainThread]: Connection 'model.flight_pipeline.stg_flights' was properly closed.
+[0m14:48:20.821383 [debug] [MainThread]: Connection 'model.flight_pipeline.int_flights_enriched' was properly closed.
+[0m14:48:20.821531 [debug] [MainThread]: Connection 'model.flight_pipeline.fct_flights' was properly closed.
+[0m14:48:20.821742 [info ] [MainThread]: 
+[0m14:48:20.821940 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m14:48:20.822563 [debug] [MainThread]: Command end result
+[0m14:48:20.839828 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/manifest.json
+[0m14:48:20.841170 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/semantic_manifest.json
+[0m14:48:20.845657 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/run_results.json
+[0m14:48:20.845876 [info ] [MainThread]: 
+[0m14:48:20.846116 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:48:20.846304 [info ] [MainThread]: 
+[0m14:48:20.846512 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m14:48:20.849017 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.8838825, "process_in_blocks": "0", "process_kernel_time": 0.256988, "process_mem_max_rss": "129302528", "process_out_blocks": "0", "process_user_time": 1.387983}
+[0m14:48:20.849295 [debug] [MainThread]: Command `dbt run` succeeded at 14:48:20.849243 after 0.88 seconds
+[0m14:48:20.849532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e37cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107368370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e7bdc0>]}
+[0m14:48:20.849846 [debug] [MainThread]: Flushing usage events
+[0m14:48:21.047406 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:49:06.375203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10876ad90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097faa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097fa880>]}
+
+
+============================== 14:49:06.377905 | 54621a21-b375-4bb5-8c51-155f4ae76646 ==============================
+[0m14:49:06.377905 [info ] [MainThread]: Running with dbt=1.10.20
+[0m14:49:06.378235 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error': 'None', 'quiet': 'False', 'log_path': '/Users/hardhiqchoudhary/Desktop/flight-price-pipeline/logs', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test', 'debug': 'False', 'no_print': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'printer_width': '80', 'version_check': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/hardhiqchoudhary/.dbt', 'use_colors': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'introspect': 'True', 'indirect_selection': 'eager'}
+[0m14:49:06.496914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070ba220>]}
+[0m14:49:06.531200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109cc3e80>]}
+[0m14:49:06.532485 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m14:49:06.603655 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m14:49:06.722411 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:49:06.722681 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:49:06.750111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a847ee0>]}
+[0m14:49:06.817448 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/manifest.json
+[0m14:49:06.819120 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/semantic_manifest.json
+[0m14:49:06.838639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a98c940>]}
+[0m14:49:06.839005 [info ] [MainThread]: Found 3 models, 12 data tests, 447 macros
+[0m14:49:06.839254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a873940>]}
+[0m14:49:06.840453 [info ] [MainThread]: 
+[0m14:49:06.840805 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:49:06.841010 [info ] [MainThread]: 
+[0m14:49:06.841311 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:49:06.843942 [debug] [ThreadPool]: Acquiring new postgres connection 'list_flight_db_public'
+[0m14:49:06.889157 [debug] [ThreadPool]: Using postgres connection "list_flight_db_public"
+[0m14:49:06.889461 [debug] [ThreadPool]: On list_flight_db_public: BEGIN
+[0m14:49:06.889651 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:49:06.924371 [debug] [ThreadPool]: SQL status: BEGIN in 0.035 seconds
+[0m14:49:06.924676 [debug] [ThreadPool]: Using postgres connection "list_flight_db_public"
+[0m14:49:06.924883 [debug] [ThreadPool]: On list_flight_db_public: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "connection_name": "list_flight_db_public"} */
+select
+      'flight_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'flight_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'flight_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:49:06.932286 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.007 seconds
+[0m14:49:06.933144 [debug] [ThreadPool]: On list_flight_db_public: ROLLBACK
+[0m14:49:06.933468 [debug] [ThreadPool]: On list_flight_db_public: Close
+[0m14:49:06.936870 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:06.937070 [debug] [MainThread]: On master: BEGIN
+[0m14:49:06.937235 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:49:06.947868 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m14:49:06.948052 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:06.948270 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m14:49:06.956741 [debug] [MainThread]: SQL status: SELECT 2 in 0.008 seconds
+[0m14:49:06.957630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54621a21-b375-4bb5-8c51-155f4ae76646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9c5d00>]}
+[0m14:49:06.957910 [debug] [MainThread]: On master: ROLLBACK
+[0m14:49:06.958263 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:06.958447 [debug] [MainThread]: On master: BEGIN
+[0m14:49:06.958912 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:49:06.959088 [debug] [MainThread]: On master: COMMIT
+[0m14:49:06.959252 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:06.959410 [debug] [MainThread]: On master: COMMIT
+[0m14:49:06.959716 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:49:06.959884 [debug] [MainThread]: On master: Close
+[0m14:49:06.961500 [debug] [Thread-1  ]: Began running node test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3
+[0m14:49:06.961754 [debug] [Thread-2  ]: Began running node test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04
+[0m14:49:06.962158 [debug] [Thread-3  ]: Began running node test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb
+[0m14:49:06.961986 [info ] [Thread-1  ]: 1 of 12 START test accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced  [RUN]
+[0m14:49:06.962427 [debug] [Thread-4  ]: Began running node test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c
+[0m14:49:06.962640 [info ] [Thread-2  ]: 2 of 12 START test accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop  [RUN]
+[0m14:49:06.962894 [info ] [Thread-3  ]: 3 of 12 START test not_null_fct_flights_id ..................................... [RUN]
+[0m14:49:06.963157 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_flight_db_public, now test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3)
+[0m14:49:06.963377 [info ] [Thread-4  ]: 4 of 12 START test not_null_fct_flights_price_usd .............................. [RUN]
+[0m14:49:06.963662 [debug] [Thread-2  ]: Acquiring new postgres connection 'test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04'
+[0m14:49:06.963929 [debug] [Thread-3  ]: Acquiring new postgres connection 'test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb'
+[0m14:49:06.964138 [debug] [Thread-1  ]: Began compiling node test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3
+[0m14:49:06.964394 [debug] [Thread-4  ]: Acquiring new postgres connection 'test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c'
+[0m14:49:06.964595 [debug] [Thread-2  ]: Began compiling node test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04
+[0m14:49:06.964790 [debug] [Thread-3  ]: Began compiling node test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb
+[0m14:49:06.976365 [debug] [Thread-4  ]: Began compiling node test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c
+[0m14:49:06.977034 [debug] [Thread-1  ]: Writing injected SQL for node "test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3"
+[0m14:49:06.980656 [debug] [Thread-2  ]: Writing injected SQL for node "test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04"
+[0m14:49:06.985891 [debug] [Thread-3  ]: Writing injected SQL for node "test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb"
+[0m14:49:06.988350 [debug] [Thread-4  ]: Writing injected SQL for node "test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c"
+[0m14:49:06.988941 [debug] [Thread-2  ]: Began executing node test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04
+[0m14:49:06.995186 [debug] [Thread-4  ]: Began executing node test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c
+[0m14:49:06.995471 [debug] [Thread-3  ]: Began executing node test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb
+[0m14:49:06.995708 [debug] [Thread-1  ]: Began executing node test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3
+[0m14:49:07.001270 [debug] [Thread-2  ]: Writing runtime sql for node "test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04"
+[0m14:49:07.003806 [debug] [Thread-4  ]: Writing runtime sql for node "test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c"
+[0m14:49:07.005603 [debug] [Thread-3  ]: Writing runtime sql for node "test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb"
+[0m14:49:07.007370 [debug] [Thread-1  ]: Writing runtime sql for node "test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3"
+[0m14:49:07.008015 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c"
+[0m14:49:07.008255 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb"
+[0m14:49:07.008484 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04"
+[0m14:49:07.008701 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3"
+[0m14:49:07.008906 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c: BEGIN
+[0m14:49:07.009126 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb: BEGIN
+[0m14:49:07.009456 [debug] [Thread-2  ]: On test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04: BEGIN
+[0m14:49:07.009672 [debug] [Thread-1  ]: On test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3: BEGIN
+[0m14:49:07.009873 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m14:49:07.010070 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m14:49:07.010267 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m14:49:07.010463 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:49:07.020682 [debug] [Thread-4  ]: SQL status: BEGIN in 0.011 seconds
+[0m14:49:07.020927 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c"
+[0m14:49:07.021180 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select price_usd
+from "flight_db"."public"."fct_flights"
+where price_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.021515 [debug] [Thread-2  ]: SQL status: BEGIN in 0.011 seconds
+[0m14:49:07.021731 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04"
+[0m14:49:07.021967 [debug] [Thread-2  ]: On test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        stop_type as value_field,
+        count(*) as n_records
+
+    from "flight_db"."public"."stg_flights"
+    group by stop_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'direct','1 stop','multi-stop'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.022246 [debug] [Thread-1  ]: SQL status: BEGIN in 0.012 seconds
+[0m14:49:07.022445 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3"
+[0m14:49:07.022678 [debug] [Thread-3  ]: SQL status: BEGIN in 0.013 seconds
+[0m14:49:07.022889 [debug] [Thread-1  ]: On test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        deal_flag as value_field,
+        count(*) as n_records
+
+    from "flight_db"."public"."fct_flights"
+    group by deal_flag
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'good deal','fair price','overpriced'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.023122 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb"
+[0m14:49:07.023333 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.002 seconds
+[0m14:49:07.023644 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "flight_db"."public"."fct_flights"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.027482 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c: ROLLBACK
+[0m14:49:07.027789 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.006 seconds
+[0m14:49:07.028038 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.004 seconds
+[0m14:49:07.028901 [debug] [Thread-2  ]: On test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04: ROLLBACK
+[0m14:49:07.029132 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c: Close
+[0m14:49:07.029889 [debug] [Thread-1  ]: On test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3: ROLLBACK
+[0m14:49:07.030092 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.002 seconds
+[0m14:49:07.030775 [debug] [Thread-2  ]: On test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04: Close
+[0m14:49:07.031585 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb: ROLLBACK
+[0m14:49:07.030508 [info ] [Thread-4  ]: 4 of 12 PASS not_null_fct_flights_price_usd .................................... [[32mPASS[0m in 0.07s]
+[0m14:49:07.031976 [debug] [Thread-1  ]: On test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3: Close
+[0m14:49:07.032378 [info ] [Thread-2  ]: 2 of 12 PASS accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop . [[32mPASS[0m in 0.07s]
+[0m14:49:07.032745 [debug] [Thread-4  ]: Finished running node test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c
+[0m14:49:07.032944 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb: Close
+[0m14:49:07.033447 [info ] [Thread-1  ]: 1 of 12 PASS accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced  [[32mPASS[0m in 0.07s]
+[0m14:49:07.033883 [debug] [Thread-2  ]: Finished running node test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04
+[0m14:49:07.034140 [debug] [Thread-4  ]: Began running node test.flight_pipeline.not_null_fct_flights_route.35b5cd4001
+[0m14:49:07.034499 [info ] [Thread-3  ]: 3 of 12 PASS not_null_fct_flights_id ........................................... [[32mPASS[0m in 0.07s]
+[0m14:49:07.034822 [debug] [Thread-1  ]: Finished running node test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3
+[0m14:49:07.035174 [debug] [Thread-2  ]: Began running node test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71
+[0m14:49:07.035477 [info ] [Thread-4  ]: 5 of 12 START test not_null_fct_flights_route .................................. [RUN]
+[0m14:49:07.036231 [debug] [Thread-3  ]: Finished running node test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb
+[0m14:49:07.039569 [debug] [Thread-1  ]: Began running node test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19
+[0m14:49:07.042157 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_fct_flights_price_usd.01538bc74c, now test.flight_pipeline.not_null_fct_flights_route.35b5cd4001)
+[0m14:49:07.041042 [info ] [Thread-2  ]: 6 of 12 START test not_null_stg_flights_destination ............................ [RUN]
+[0m14:49:07.043610 [debug] [Thread-3  ]: Began running node test.flight_pipeline.not_null_stg_flights_id.47c00e259e
+[0m14:49:07.043942 [info ] [Thread-1  ]: 7 of 12 START test not_null_stg_flights_flight_date ............................ [RUN]
+[0m14:49:07.044552 [debug] [Thread-4  ]: Began compiling node test.flight_pipeline.not_null_fct_flights_route.35b5cd4001
+[0m14:49:07.045125 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.accepted_values_stg_flights_stop_type__direct__1_stop__multi_stop.abe8212d04, now test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71)
+[0m14:49:07.046085 [info ] [Thread-3  ]: 8 of 12 START test not_null_stg_flights_id ..................................... [RUN]
+[0m14:49:07.046967 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.accepted_values_fct_flights_deal_flag__good_deal__fair_price__overpriced.0cadc5b9c3, now test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19)
+[0m14:49:07.055267 [debug] [Thread-4  ]: Writing injected SQL for node "test.flight_pipeline.not_null_fct_flights_route.35b5cd4001"
+[0m14:49:07.055550 [debug] [Thread-2  ]: Began compiling node test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71
+[0m14:49:07.055833 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_fct_flights_id.ea54aff3cb, now test.flight_pipeline.not_null_stg_flights_id.47c00e259e)
+[0m14:49:07.056052 [debug] [Thread-1  ]: Began compiling node test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19
+[0m14:49:07.058928 [debug] [Thread-2  ]: Writing injected SQL for node "test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71"
+[0m14:49:07.059182 [debug] [Thread-3  ]: Began compiling node test.flight_pipeline.not_null_stg_flights_id.47c00e259e
+[0m14:49:07.061866 [debug] [Thread-1  ]: Writing injected SQL for node "test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19"
+[0m14:49:07.064695 [debug] [Thread-3  ]: Writing injected SQL for node "test.flight_pipeline.not_null_stg_flights_id.47c00e259e"
+[0m14:49:07.064932 [debug] [Thread-4  ]: Began executing node test.flight_pipeline.not_null_fct_flights_route.35b5cd4001
+[0m14:49:07.065342 [debug] [Thread-2  ]: Began executing node test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71
+[0m14:49:07.068208 [debug] [Thread-4  ]: Writing runtime sql for node "test.flight_pipeline.not_null_fct_flights_route.35b5cd4001"
+[0m14:49:07.070003 [debug] [Thread-2  ]: Writing runtime sql for node "test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71"
+[0m14:49:07.070222 [debug] [Thread-3  ]: Began executing node test.flight_pipeline.not_null_stg_flights_id.47c00e259e
+[0m14:49:07.070430 [debug] [Thread-1  ]: Began executing node test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19
+[0m14:49:07.072230 [debug] [Thread-3  ]: Writing runtime sql for node "test.flight_pipeline.not_null_stg_flights_id.47c00e259e"
+[0m14:49:07.074030 [debug] [Thread-1  ]: Writing runtime sql for node "test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19"
+[0m14:49:07.074363 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71"
+[0m14:49:07.074603 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_route.35b5cd4001"
+[0m14:49:07.074907 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71: BEGIN
+[0m14:49:07.075138 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_route.35b5cd4001: BEGIN
+[0m14:49:07.075385 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_id.47c00e259e"
+[0m14:49:07.075578 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m14:49:07.075805 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19"
+[0m14:49:07.076014 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m14:49:07.076216 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_stg_flights_id.47c00e259e: BEGIN
+[0m14:49:07.076493 [debug] [Thread-1  ]: On test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19: BEGIN
+[0m14:49:07.076747 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m14:49:07.076971 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:49:07.090675 [debug] [Thread-2  ]: SQL status: BEGIN in 0.015 seconds
+[0m14:49:07.093858 [debug] [Thread-1  ]: SQL status: BEGIN in 0.016 seconds
+[0m14:49:07.094347 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71"
+[0m14:49:07.095362 [debug] [Thread-4  ]: SQL status: BEGIN in 0.019 seconds
+[0m14:49:07.095698 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19"
+[0m14:49:07.095966 [debug] [Thread-3  ]: SQL status: BEGIN in 0.019 seconds
+[0m14:49:07.096498 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select destination
+from "flight_db"."public"."stg_flights"
+where destination is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.096778 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_fct_flights_route.35b5cd4001"
+[0m14:49:07.097002 [debug] [Thread-1  ]: On test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select flight_date
+from "flight_db"."public"."stg_flights"
+where flight_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.097359 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_id.47c00e259e"
+[0m14:49:07.097730 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_route.35b5cd4001: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_fct_flights_route.35b5cd4001"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select route
+from "flight_db"."public"."fct_flights"
+where route is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.098129 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_stg_flights_id.47c00e259e: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_stg_flights_id.47c00e259e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "flight_db"."public"."stg_flights"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.099122 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.001 seconds
+[0m14:49:07.099339 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.001 seconds
+[0m14:49:07.100467 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_route.35b5cd4001: ROLLBACK
+[0m14:49:07.100686 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:49:07.100904 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:49:07.101692 [debug] [Thread-1  ]: On test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19: ROLLBACK
+[0m14:49:07.102539 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71: ROLLBACK
+[0m14:49:07.102760 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_fct_flights_route.35b5cd4001: Close
+[0m14:49:07.103508 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_stg_flights_id.47c00e259e: ROLLBACK
+[0m14:49:07.103992 [info ] [Thread-4  ]: 5 of 12 PASS not_null_fct_flights_route ........................................ [[32mPASS[0m in 0.06s]
+[0m14:49:07.104231 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71: Close
+[0m14:49:07.104453 [debug] [Thread-1  ]: On test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19: Close
+[0m14:49:07.104767 [debug] [Thread-4  ]: Finished running node test.flight_pipeline.not_null_fct_flights_route.35b5cd4001
+[0m14:49:07.104954 [debug] [Thread-3  ]: On test.flight_pipeline.not_null_stg_flights_id.47c00e259e: Close
+[0m14:49:07.105285 [info ] [Thread-2  ]: 6 of 12 PASS not_null_stg_flights_destination .................................. [[32mPASS[0m in 0.06s]
+[0m14:49:07.105631 [info ] [Thread-1  ]: 7 of 12 PASS not_null_stg_flights_flight_date .................................. [[32mPASS[0m in 0.06s]
+[0m14:49:07.105886 [debug] [Thread-4  ]: Began running node test.flight_pipeline.not_null_stg_flights_origin.140c26011d
+[0m14:49:07.106226 [info ] [Thread-3  ]: 8 of 12 PASS not_null_stg_flights_id ........................................... [[32mPASS[0m in 0.05s]
+[0m14:49:07.106582 [debug] [Thread-2  ]: Finished running node test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71
+[0m14:49:07.106899 [debug] [Thread-1  ]: Finished running node test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19
+[0m14:49:07.107144 [info ] [Thread-4  ]: 9 of 12 START test not_null_stg_flights_origin ................................. [RUN]
+[0m14:49:07.107454 [debug] [Thread-3  ]: Finished running node test.flight_pipeline.not_null_stg_flights_id.47c00e259e
+[0m14:49:07.107683 [debug] [Thread-2  ]: Began running node test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c
+[0m14:49:07.107924 [debug] [Thread-1  ]: Began running node test.flight_pipeline.unique_fct_flights_id.48f566847b
+[0m14:49:07.108191 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_fct_flights_route.35b5cd4001, now test.flight_pipeline.not_null_stg_flights_origin.140c26011d)
+[0m14:49:07.108423 [debug] [Thread-3  ]: Began running node test.flight_pipeline.unique_stg_flights_id.6e7786a7f8
+[0m14:49:07.108657 [info ] [Thread-2  ]: 10 of 12 START test not_null_stg_flights_price_usd ............................. [RUN]
+[0m14:49:07.108912 [info ] [Thread-1  ]: 11 of 12 START test unique_fct_flights_id ...................................... [RUN]
+[0m14:49:07.109142 [debug] [Thread-4  ]: Began compiling node test.flight_pipeline.not_null_stg_flights_origin.140c26011d
+[0m14:49:07.109341 [info ] [Thread-3  ]: 12 of 12 START test unique_stg_flights_id ...................................... [RUN]
+[0m14:49:07.109723 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_stg_flights_destination.f0c4577b71, now test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c)
+[0m14:49:07.110145 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_stg_flights_flight_date.afb316eb19, now test.flight_pipeline.unique_fct_flights_id.48f566847b)
+[0m14:49:07.113208 [debug] [Thread-4  ]: Writing injected SQL for node "test.flight_pipeline.not_null_stg_flights_origin.140c26011d"
+[0m14:49:07.113467 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.flight_pipeline.not_null_stg_flights_id.47c00e259e, now test.flight_pipeline.unique_stg_flights_id.6e7786a7f8)
+[0m14:49:07.113687 [debug] [Thread-2  ]: Began compiling node test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c
+[0m14:49:07.113887 [debug] [Thread-1  ]: Began compiling node test.flight_pipeline.unique_fct_flights_id.48f566847b
+[0m14:49:07.114168 [debug] [Thread-3  ]: Began compiling node test.flight_pipeline.unique_stg_flights_id.6e7786a7f8
+[0m14:49:07.117051 [debug] [Thread-2  ]: Writing injected SQL for node "test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c"
+[0m14:49:07.117400 [debug] [Thread-4  ]: Began executing node test.flight_pipeline.not_null_stg_flights_origin.140c26011d
+[0m14:49:07.121702 [debug] [Thread-1  ]: Writing injected SQL for node "test.flight_pipeline.unique_fct_flights_id.48f566847b"
+[0m14:49:07.125448 [debug] [Thread-3  ]: Writing injected SQL for node "test.flight_pipeline.unique_stg_flights_id.6e7786a7f8"
+[0m14:49:07.127356 [debug] [Thread-4  ]: Writing runtime sql for node "test.flight_pipeline.not_null_stg_flights_origin.140c26011d"
+[0m14:49:07.127945 [debug] [Thread-1  ]: Began executing node test.flight_pipeline.unique_fct_flights_id.48f566847b
+[0m14:49:07.128172 [debug] [Thread-3  ]: Began executing node test.flight_pipeline.unique_stg_flights_id.6e7786a7f8
+[0m14:49:07.128402 [debug] [Thread-2  ]: Began executing node test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c
+[0m14:49:07.130386 [debug] [Thread-1  ]: Writing runtime sql for node "test.flight_pipeline.unique_fct_flights_id.48f566847b"
+[0m14:49:07.131202 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_origin.140c26011d"
+[0m14:49:07.134825 [debug] [Thread-3  ]: Writing runtime sql for node "test.flight_pipeline.unique_stg_flights_id.6e7786a7f8"
+[0m14:49:07.137652 [debug] [Thread-2  ]: Writing runtime sql for node "test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c"
+[0m14:49:07.138061 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_stg_flights_origin.140c26011d: BEGIN
+[0m14:49:07.138853 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m14:49:07.139416 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.unique_fct_flights_id.48f566847b"
+[0m14:49:07.140015 [debug] [Thread-1  ]: On test.flight_pipeline.unique_fct_flights_id.48f566847b: BEGIN
+[0m14:49:07.140266 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:49:07.140538 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.unique_stg_flights_id.6e7786a7f8"
+[0m14:49:07.140783 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c"
+[0m14:49:07.141065 [debug] [Thread-3  ]: On test.flight_pipeline.unique_stg_flights_id.6e7786a7f8: BEGIN
+[0m14:49:07.141280 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c: BEGIN
+[0m14:49:07.141489 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m14:49:07.141701 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m14:49:07.150145 [debug] [Thread-4  ]: SQL status: BEGIN in 0.012 seconds
+[0m14:49:07.150378 [debug] [Thread-4  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_origin.140c26011d"
+[0m14:49:07.150605 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_stg_flights_origin.140c26011d: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_stg_flights_origin.140c26011d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select origin
+from "flight_db"."public"."stg_flights"
+where origin is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.150814 [debug] [Thread-1  ]: SQL status: BEGIN in 0.011 seconds
+[0m14:49:07.151057 [debug] [Thread-1  ]: Using postgres connection "test.flight_pipeline.unique_fct_flights_id.48f566847b"
+[0m14:49:07.151252 [debug] [Thread-2  ]: SQL status: BEGIN in 0.010 seconds
+[0m14:49:07.151474 [debug] [Thread-1  ]: On test.flight_pipeline.unique_fct_flights_id.48f566847b: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.unique_fct_flights_id.48f566847b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "flight_db"."public"."fct_flights"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.151706 [debug] [Thread-2  ]: Using postgres connection "test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c"
+[0m14:49:07.151937 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select price_usd
+from "flight_db"."public"."stg_flights"
+where price_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.153319 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.002 seconds
+[0m14:49:07.154151 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_stg_flights_origin.140c26011d: ROLLBACK
+[0m14:49:07.154412 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:49:07.155119 [debug] [Thread-1  ]: On test.flight_pipeline.unique_fct_flights_id.48f566847b: ROLLBACK
+[0m14:49:07.155320 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:49:07.155510 [debug] [Thread-4  ]: On test.flight_pipeline.not_null_stg_flights_origin.140c26011d: Close
+[0m14:49:07.155741 [debug] [Thread-3  ]: SQL status: BEGIN in 0.014 seconds
+[0m14:49:07.155944 [debug] [Thread-1  ]: On test.flight_pipeline.unique_fct_flights_id.48f566847b: Close
+[0m14:49:07.156608 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c: ROLLBACK
+[0m14:49:07.157130 [debug] [Thread-3  ]: Using postgres connection "test.flight_pipeline.unique_stg_flights_id.6e7786a7f8"
+[0m14:49:07.156955 [info ] [Thread-4  ]: 9 of 12 PASS not_null_stg_flights_origin ....................................... [[32mPASS[0m in 0.05s]
+[0m14:49:07.157510 [info ] [Thread-1  ]: 11 of 12 PASS unique_fct_flights_id ............................................ [[32mPASS[0m in 0.05s]
+[0m14:49:07.157764 [debug] [Thread-3  ]: On test.flight_pipeline.unique_stg_flights_id.6e7786a7f8: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "flight_pipeline", "target_name": "dev", "node_id": "test.flight_pipeline.unique_stg_flights_id.6e7786a7f8"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "flight_db"."public"."stg_flights"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:49:07.157973 [debug] [Thread-2  ]: On test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c: Close
+[0m14:49:07.158243 [debug] [Thread-4  ]: Finished running node test.flight_pipeline.not_null_stg_flights_origin.140c26011d
+[0m14:49:07.158512 [debug] [Thread-1  ]: Finished running node test.flight_pipeline.unique_fct_flights_id.48f566847b
+[0m14:49:07.158833 [info ] [Thread-2  ]: 10 of 12 PASS not_null_stg_flights_price_usd ................................... [[32mPASS[0m in 0.05s]
+[0m14:49:07.159248 [debug] [Thread-2  ]: Finished running node test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c
+[0m14:49:07.161285 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:49:07.162116 [debug] [Thread-3  ]: On test.flight_pipeline.unique_stg_flights_id.6e7786a7f8: ROLLBACK
+[0m14:49:07.162435 [debug] [Thread-3  ]: On test.flight_pipeline.unique_stg_flights_id.6e7786a7f8: Close
+[0m14:49:07.162737 [info ] [Thread-3  ]: 12 of 12 PASS unique_stg_flights_id ............................................ [[32mPASS[0m in 0.05s]
+[0m14:49:07.163103 [debug] [Thread-3  ]: Finished running node test.flight_pipeline.unique_stg_flights_id.6e7786a7f8
+[0m14:49:07.163818 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:07.163991 [debug] [MainThread]: On master: BEGIN
+[0m14:49:07.164146 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:49:07.172875 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m14:49:07.173075 [debug] [MainThread]: On master: COMMIT
+[0m14:49:07.173249 [debug] [MainThread]: Using postgres connection "master"
+[0m14:49:07.173421 [debug] [MainThread]: On master: COMMIT
+[0m14:49:07.173732 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:49:07.173896 [debug] [MainThread]: On master: Close
+[0m14:49:07.174114 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:49:07.174275 [debug] [MainThread]: Connection 'test.flight_pipeline.unique_fct_flights_id.48f566847b' was properly closed.
+[0m14:49:07.174421 [debug] [MainThread]: Connection 'test.flight_pipeline.not_null_stg_flights_price_usd.f833ecd94c' was properly closed.
+[0m14:49:07.174562 [debug] [MainThread]: Connection 'test.flight_pipeline.unique_stg_flights_id.6e7786a7f8' was properly closed.
+[0m14:49:07.174701 [debug] [MainThread]: Connection 'test.flight_pipeline.not_null_stg_flights_origin.140c26011d' was properly closed.
+[0m14:49:07.174879 [info ] [MainThread]: 
+[0m14:49:07.175064 [info ] [MainThread]: Finished running 12 data tests in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m14:49:07.176172 [debug] [MainThread]: Command end result
+[0m14:49:07.192743 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/manifest.json
+[0m14:49:07.193922 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/semantic_manifest.json
+[0m14:49:07.199485 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/hardhiqchoudhary/Desktop/flight-price-pipeline/target/run_results.json
+[0m14:49:07.199884 [info ] [MainThread]: 
+[0m14:49:07.200375 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:49:07.200717 [info ] [MainThread]: 
+[0m14:49:07.200944 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+[0m14:49:07.202846 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.8701624, "process_in_blocks": "0", "process_kernel_time": 0.226981, "process_mem_max_rss": "130236416", "process_out_blocks": "0", "process_user_time": 1.408965}
+[0m14:49:07.203164 [debug] [MainThread]: Command `dbt test` succeeded at 14:49:07.203111 after 0.87 seconds
+[0m14:49:07.203560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10876ad90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a6c1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070ba220>]}
+[0m14:49:07.203821 [debug] [MainThread]: Flushing usage events
+[0m14:49:07.257542 [debug] [MainThread]: An error was encountered while trying to flush usage events
