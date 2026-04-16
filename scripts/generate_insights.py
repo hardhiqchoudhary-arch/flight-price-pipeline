@@ -2,12 +2,12 @@ import os
 import psycopg2
 import pickle
 import pandas as pd
-from openai import OpenAI
+from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def load_latest_flights():
     conn = psycopg2.connect(
@@ -81,7 +81,7 @@ def generate_insight(df, prediction):
     """
 
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="llama-3.3-70b-versatile",
         messages=[
             {"role": "system", "content": "You are a helpful flight price analyst."},
             {"role": "user", "content": prompt}
